@@ -1,5 +1,5 @@
-\name{rmadlib-package}
-\alias{rmadlib-package}
+\name{PivotalR-package}
+\alias{PivotalR-package}
 \docType{package}
 \title{
   Wrapper for MADlib, an open-source library for scalable in-database
@@ -13,7 +13,7 @@
 }
 \details{
 \tabular{ll}{
-Package: \tab rmadlib\cr
+Package: \tab PivotalR\cr
 Type: \tab Package\cr
 Version: \tab 0.0.1\cr
 Date: \tab 2013-04-01\cr

@@ -1,4 +1,4 @@
-Package: rmadlib
+Package: PivotalR
 Type: Package
 Title: R wrapper for MADlib
 Version: 0.0.1

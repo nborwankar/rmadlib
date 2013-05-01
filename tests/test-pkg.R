@@ -1,7 +1,7 @@
 
-install.packages(pkgs = "rmadlib_0.0.1.tar.gz", repos = NULL)
+install.packages(pkgs = "PivotalR_0.0.1.tar.gz", repos = NULL)
 
-library(rmadlib)
+library(PivotalR)
 
 db.connect(host="localhost", user="qianh1", dbname="qianh1")
 

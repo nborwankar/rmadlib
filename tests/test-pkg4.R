@@ -1,18 +1,18 @@
-install.packages("rmadlib_0.0.1.tar.gz", repos = NULL, type = "source")
-library(rmadlib)
+install.packages("PivotalR_0.0.1.tar.gz", repos = NULL, type = "source")
+library(PivotalR)
 db.connect(host="localhost", user="qianh1", dbname="qianh1", port=5433)
 
 x <- data.frame(a = 1:3, b = 2:4)
 
-rmadlib:::.db.removeTable("testx1")
+PivotalR:::.db.removeTable("testx1")
 
-rmadlib:::.db.writeTable(table = "testx1", r.obj = x, distributed.by = NULL, row.names = TRUE, is.temp = TRUE)
+PivotalR:::.db.writeTable(table = "testx1", r.obj = x, distributed.by = NULL, row.names = TRUE, is.temp = TRUE)
 
-res <- rmadlib:::.db.readTable("testx1")
+res <- PivotalR:::.db.readTable("testx1")
 
 res
 
-t <- try(rmadlib:::.db.writeTable(table = "testx1", r.obj = x, distributed.by = NULL, row.names = TRUE, is.temp = TRUE))
+t <- try(PivotalR:::.db.writeTable(table = "testx1", r.obj = x, distributed.by = NULL, row.names = TRUE, is.temp = TRUE))
 
 
 y <- db.data.frame("testx1")
@@ -84,4 +84,4 @@ dat <- data.frame(x1 = 1:3, x2 = 1:3, x3 = 1:3, x4 = 1:3, y = 1:3)
 
 analyze.formula(formula = log(y) ~ x1 * (x1 + x2) + I(x2^2) + exp(1+x1) | x3 + x4, data = dat)
 
-rmadlib:::.db.str2vec("x3 x4", type = "character")
+PivotalR:::.db.str2vec("x3 x4", type = "character")

@@ -1,5 +1,5 @@
 
-library(rmadlib)
+library(PivotalR)
 
 db.connect(dbname = "qianh1", user = "qianh1", host = "localhost", port = 5433)
 

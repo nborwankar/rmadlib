@@ -7,9 +7,9 @@
 \alias{as.db.data.frame,character-method}
 \alias{as.db.data.frame,data.frame-method}
 \alias{as.db.data.frame,db.Rquery-method}
-\title{ Methods for Function \code{as.db.data.frame} in Package \pkg{rmadlib} ~~}
+\title{ Methods for Function \code{as.db.data.frame} in Package \pkg{PivotalR} ~~}
 \description{
-  Methods for function \code{as.db.data.frame} in package \pkg{rmadlib} ~~
+  Methods for function \code{as.db.data.frame} in package \pkg{PivotalR} ~~
 }
 \section{Methods}{
 \describe{

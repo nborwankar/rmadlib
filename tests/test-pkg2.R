@@ -1,5 +1,5 @@
-install.packages("rmadlib_0.0.1.tar.gz", repos = NULL, type = "source")
-library(rmadlib)
+install.packages("PivotalR_0.0.1.tar.gz", repos = NULL, type = "source")
+library(PivotalR)
 db.connect(host="localhost", user="qianh1", dbname="qianh1", port=5433)
 
 db.disconnect(2)
@@ -24,53 +24,53 @@ conn.id(x)
 
 conn.id(x) <- 2
 
-rmadlib:::.db.listTables()
+PivotalR:::.db.listTables()
 
-rmadlib:::.is.table.or.view(c("public", "cvtest1"))
+PivotalR:::.is.table.or.view(c("public", "cvtest1"))
 
-rst <- rmadlib:::.db.getQuery("select count(*) from cvtest1")
-
-rst
-
-rst <- rmadlib:::.db.sendQuery("select count(*) from cvtest1")
-
-rmadlib:::.db.fetch(rst)
-
-rst <- rmadlib:::.db.getQuery("select column_name, data_type from information_schema.columns where table_name = 'cvtest'")
+rst <- PivotalR:::.db.getQuery("select count(*) from cvtest1")
 
 rst
 
-rmadlib:::.db.existsTable("cvtest1")
+rst <- PivotalR:::.db.sendQuery("select count(*) from cvtest1")
 
-rmadlib:::.db.existsTable("tv")
+PivotalR:::.db.fetch(rst)
 
-rmadlib:::.db.existsTable(c("madlibtestdata", "lin_redundantobservations_oi"))
+rst <- PivotalR:::.db.getQuery("select column_name, data_type from information_schema.columns where table_name = 'cvtest'")
 
-rmadlib:::.db.listFields(c("madlibtestdata", "lin_redundantobservations_oi"))
+rst
 
-rmadlib:::.db.existsTable("tt_1")
+PivotalR:::.db.existsTable("cvtest1")
 
-rmadlib:::.db.listFields("tt_1")
+PivotalR:::.db.existsTable("tv")
 
-res <- rmadlib:::.db.readTable("tt5")
+PivotalR:::.db.existsTable(c("madlibtestdata", "lin_redundantobservations_oi"))
+
+PivotalR:::.db.listFields(c("madlibtestdata", "lin_redundantobservations_oi"))
+
+PivotalR:::.db.existsTable("tt_1")
+
+PivotalR:::.db.listFields("tt_1")
+
+res <- PivotalR:::.db.readTable("tt5")
 
 str <- res$val[1]
 
-rmadlib:::.db.str2vec(str)
+PivotalR:::.db.str2vec(str)
 
 x <- data.frame(a = 1:3, b = 2:4)
 
-rmadlib:::.db.removeTable("testx1")
+PivotalR:::.db.removeTable("testx1")
 
-rmadlib:::.db.writeTable(table = "testx1", r.obj = x, distributed.by = NULL, row.names = FALSE)
+PivotalR:::.db.writeTable(table = "testx1", r.obj = x, distributed.by = NULL, row.names = FALSE)
 
-res <- rmadlib:::.db.readTable("testx1")
+res <- PivotalR:::.db.readTable("testx1")
 
 ## ------------------------------------------------------------------------
 
 num <- as.numeric(strsplit(gsub("\\{(.*)\\}", "\\1", str), ",")[[1]])
 
-res <- rmadlib:::.db.readTable("teststr")
+res <- PivotalR:::.db.readTable("teststr")
 
 str <- res$str[2]
 

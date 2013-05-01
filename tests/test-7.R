@@ -1,6 +1,6 @@
 ## test madlib.lm
 
-library(rmadlib)
+library(PivotalR)
 
 db.connect(dbname = "qianh1", user = "qianh1", host = "localhost", port = 5433)
 
@@ -27,7 +27,7 @@ git <- madlib.glm(I(interlocks<10) ~ assets + sector + nation, data = x, family 
 git
 
 
-dat <- rmadlib:::.db.getQuery("select * from madlibtestdata.lin_ornstein")
+dat <- PivotalR:::.db.getQuery("select * from madlibtestdata.lin_ornstein")
 
 dat$y <- factor(as.integer(dat$interlocks < 10) + 2)
 

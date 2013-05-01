@@ -148,7 +148,7 @@ madlib.lm(formula, data, na.action, hetero = FALSE, ...)
   use \code{|} to add their own functionalities into formula
   object. However, \code{|} has different meanings and usages
   in different packages. The user must be careful that usage of \code{|} in
-  \code{\link{rmadlib-package}} may not be the same as the others.
+  \code{\link{PivotalR-package}} may not be the same as the others.
 }
 
 \seealso{

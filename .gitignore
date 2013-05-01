@@ -1,7 +1,7 @@
 random.walk.on.network/*
 .Rhistory
-rmadlib.Rcheck/*
-rmadlib*.tar.gz
+PivotalR.Rcheck/*
+PivotalR*.tar.gz
 *.swp
 *.csv
 clickme/*
