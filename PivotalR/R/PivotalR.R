@@ -3,9 +3,9 @@
 ## start shiny GUI
 ## ------------------------------------------------------------------------
 
-rmadlib <- function ()
+PivotalR <- function ()
 {
-    ## rmadlib's installation path
+    ## PivotalR's installation path
     .localVars$pkg.path <- path.package(.this.pkg.name)
     ## gui folder installation path
     gui.dir <- paste(.localVars$pkg.path, "/gui", sep = "")
